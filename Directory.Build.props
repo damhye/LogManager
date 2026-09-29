@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <!-- Debug and release output path setting -->
+    <OutDir>$(SolutionDir)_Output\$(Configuration)\</OutDir>
+    
+    <!-- Base intermediate path setting -->
+    <BaseIntermediateOutputPath>$(SolutionDir)_Intermediate\</BaseIntermediateOutputPath>
+    <!-- Intermediate file path setting -->
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+
+    <Version>1.0.0.9769</Version>
+    <FileVersion>1.0.0.9769</FileVersion>
+    <AssemblyVersion>1.0.0.9769</AssemblyVersion>
+    <InformationalVersion>1.0.0.26093000</InformationalVersion>
+  </PropertyGroup>
+</Project>

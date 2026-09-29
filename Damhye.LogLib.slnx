@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Custom build setting/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="LogManager/LogManager.csproj" />
+</Solution>

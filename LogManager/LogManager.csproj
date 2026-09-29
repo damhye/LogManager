@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
+
+    <Company>DamYeon</Company>
+    <Product>LogManager</Product>
+    <AssemblyTitle>Log library</AssemblyTitle>
+    <Copyright>(C) 2013. Kwangjin Hong  All rights reserved.</Copyright>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Kwangjin Hong</Authors>
+    <Description>Log Library</Description>
+    <PackageId>Damhye.LogLib</PackageId>
+    <PackageOutputPath>$(SolutionDir)\_Packages</PackageOutputPath>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/damhye/LogManager</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/damhye/LogManager</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <Import Project="AutoVersion.targets" />
+
+</Project>

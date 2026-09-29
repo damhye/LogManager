@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="AutoUpdateBuildNumber" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <PropsFile>$(SolutionDir)Directory.Build.props</PropsFile>
+    </PropertyGroup>
+
+    <Exec Command="powershell -ExecutionPolicy Bypass -Command &quot;$base=Get-Date '2000-01-01'; $now=Get-Date; $elapsed=[int]([Math]::Floor(($now-$base).TotalDays)); $buildStr=$now.ToString('yyMMddHH'); (Get-Content '$(PropsFile)') -replace '&lt;Version&gt;.*&lt;/Version&gt;', ('&lt;Version&gt;1.0.0.'+$elapsed+'&lt;/Version&gt;') -replace '&lt;FileVersion&gt;.*&lt;/FileVersion&gt;', ('&lt;FileVersion&gt;1.0.0.'+$elapsed+'&lt;/FileVersion&gt;') -replace '&lt;AssemblyVersion&gt;.*&lt;/AssemblyVersion&gt;', ('&lt;AssemblyVersion&gt;1.0.0.'+$elapsed+'&lt;/AssemblyVersion&gt;') -replace '&lt;InformationalVersion&gt;.*&lt;/InformationalVersion&gt;', ('&lt;InformationalVersion&gt;1.0.0.'+$buildStr+'&lt;/InformationalVersion&gt;') | Set-Content '$(PropsFile)'&quot;" />
+  </Target>
+
+</Project>
+
+
+
+
+
+
